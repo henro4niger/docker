@@ -90,9 +90,8 @@ def hello_pubsub(event, context):
          `timestamp` field contains the publish time.
     """
     import base64
-    os.environ['TEST_NAME'] = 'henry'
     print("""This Function was triggered by messageId {} published at {} by {}
-    """.format(context.event_id, context.timestamp, TEST_NAME))
+    """.format(context.event_id, context.timestamp))
 
     if 'data' in event:
         name = base64.b64decode(event['data']).decode('utf-8')
