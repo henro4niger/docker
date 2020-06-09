@@ -91,7 +91,7 @@ def hello_pubsub(event, context):
     """
     import base64
     TEST_NAME = os.getenv('TEST_NAME')
-    print("""This Function was triggered by messageId {} published at {} by
+    print("""This Function was triggered by messageId {} published at {} by {}
     """.format(context.event_id, context.timestamp, TEST_NAME))
 
     if 'data' in event:
