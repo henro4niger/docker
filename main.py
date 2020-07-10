@@ -6,8 +6,6 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
-    host_name = socket.gethostname()
-    host_ip = socket.gethostbyname(host_name) 
     return 'welcome to aws code pipeline!!!!
 
 @app.errorhandler(500)
