@@ -18,8 +18,9 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
-    get_Host_name_IP()
-    return get_Host_name_IP()
+    host_name = socket.gethostname()
+    host_ip = socket.gethostbyname(host_name) 
+    return host_name, host_ip
 
 @app.errorhandler(500)
 def server_error(e):
