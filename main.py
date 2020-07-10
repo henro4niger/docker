@@ -19,7 +19,7 @@ app = Flask(__name__)
 def hello():
     """Return a friendly HTTP greeting."""
     get_Host_name_IP()
-    return 'Hello World from pipeline!!!!!!'
+    return get_Host_name_IP()
 
 @app.errorhandler(500)
 def server_error(e):
