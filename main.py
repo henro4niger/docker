@@ -1,16 +1,4 @@
 import logging
-
-import socket 
-def get_Host_name_IP(): 
-    try: 
-        host_name = socket.gethostname() 
-        host_ip = socket.gethostbyname(host_name) 
-        print("Hostname :  ",host_name) 
-        print("IP : ",host_ip) 
-    except: 
-        print("Unable to get Hostname and IP") 
-  
-get_Host_name_IP()
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
@@ -20,7 +8,7 @@ def hello():
     """Return a friendly HTTP greeting."""
     host_name = socket.gethostname()
     host_ip = socket.gethostbyname(host_name) 
-    return host_name, host_ip
+    return 'welcome to aws code pipeline!!!!
 
 @app.errorhandler(500)
 def server_error(e):
