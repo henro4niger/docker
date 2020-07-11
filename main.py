@@ -1,4 +1,5 @@
 import logging
+
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
@@ -6,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
-    return 'welcome to aws code pipeline!!!!
+    return 'Hello World'
 
 @app.errorhandler(500)
 def server_error(e):
